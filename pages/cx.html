@@ -11,7 +11,7 @@ function open_without_referrer(){
 	var i = document.createElement('iframe');
 	i.width = 0;
 	i.height = 0;
-	i.src = 'jsbridge://ui/setTitleButtons?p={"left":{"title":"","callback":"__MQQ_CALLBACK_2"},"right":{"hidden":true}}';
+	i.src = 'jsbridge://ui/setTitleButtons?p=%7B%22left%22%3A%7B%22title%22%3A%22%22%2C%22callback%22%3A%22__MQQ_CALLBACK_2%22%7D%2C%22right%22%3A%7B%22hidden%22%3Atrue%7D%7D';
   	i.style.display="none";
 	document.getElementsByTagName("body")[0].appendChild(i);
 }
